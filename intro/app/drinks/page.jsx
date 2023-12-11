@@ -17,7 +17,7 @@ const DrinksPage = async () => {
 
   const data = await fetchDrinks();
 
-  console.log(Object.keys(data));
+  // console.log(Object.keys(data));
 
   return (
     <div>
