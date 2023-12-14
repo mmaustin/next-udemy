@@ -23,7 +23,8 @@ const SingleDrinkPage = async ({ params }) => {
       <Link href='/drinks' className="btn btn-primary mt-8 mb-12">
         back to drinks
       </Link>
-      <Image src={imgSrc} className="w-48 h-48 rounded-lg" alt='drink' />
+      <Image src={imgSrc} width={300} height={300} className="w-48 h-48 rounded-lg shadow-lg mb-4" priority alt={title} />
+      {/* Static Image setup <Image src={imgSrc} className="w-48 h-48 rounded-lg" alt='drink' /> */}
       <h1 className="text-4xl mb-8">{title}</h1>
     </div>
   )
