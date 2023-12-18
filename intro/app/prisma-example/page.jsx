@@ -1,3 +1,4 @@
+//start prisma database - npx prisma studio
 import prisma from "@/utils/db";
 
 const prismaHandlers = async () => {
