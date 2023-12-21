@@ -1,14 +1,11 @@
-import prisma from "@/utils/db";
+
 import Link from "next/link";
 import DeleteForm from "./DeleteForm";
+import { getAllTasks } from "@/utils/actions";
 
 const TaskList = async () => {
 
-  const allTasks = await prisma.task.findMany({
-    orderBy: {
-      createAt: 'desc',
-    },
-  });
+  const allTasks = await getAllTasks();
 
   if (allTasks.length === 0) {
     return (
