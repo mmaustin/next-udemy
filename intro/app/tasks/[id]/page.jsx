@@ -1,8 +1,21 @@
+import EditForm from "@/components/EditForm";
+import { getTask } from "@/utils/actions";
+import Link from "next/link";
 
 
-const SingleTask = () => {
+const SingleTask = async ({ params }) => {
+
+  const task = await getTask(params.id);
+
   return (
-    <div>Single Task</div>
+    <>
+      <div className="mb-16">
+        <EditForm task={task} />
+        <Link href="/tasks" className="btn btn-accent" >
+          back to tasks
+        </Link>
+      </div>
+    </>
   )
 }
 export default SingleTask;

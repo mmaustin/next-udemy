@@ -1,8 +1,8 @@
 
 
-const EditForm = () => {
+const EditForm = ({ task }) => {
   return (
-    <div>EditForm</div>
+    <div>{task.content}</div>
   )
 }
 export default EditForm;

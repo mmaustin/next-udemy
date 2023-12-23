@@ -29,7 +29,11 @@ export const deleteTask = async (formData) => {
 };
 
 export const getTask = async (id) => {
-
+  return await prisma.task.findUnique({
+    where: {
+      id,
+    },
+  });
 };
 
 export const editTask = async (formData) => {
