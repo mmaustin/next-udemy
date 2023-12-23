@@ -10,11 +10,11 @@ const SingleTask = async ({ params }) => {
   return (
     <>
       <div className="mb-16">
-        <EditForm task={task} />
         <Link href="/tasks" className="btn btn-accent" >
           back to tasks
         </Link>
       </div>
+      <EditForm task={task} />
     </>
   )
 }
